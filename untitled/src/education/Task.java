@@ -12,7 +12,12 @@ public class Task {
     private String type;
     private String answer;
 
-    
+    public Task(String condition, Complexity complexity, String type, String answer) {
+        this.condition = condition;
+        this.complexity = complexity;
+        this.type = type;
+        this.answer = answer;
+    }
 
     public int task() {
         int hard=(int)(Math.random()*4);//сложность задания(может попасть любое из трёх уровней сложности

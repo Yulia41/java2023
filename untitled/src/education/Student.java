@@ -14,7 +14,12 @@ public class Student {
     private String group;
     private int age;
 
-
+    public Student(String firstName, String secondName, String group, int age) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.group = group;
+        this.age = age;
+    }
 
 
 
