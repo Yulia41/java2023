@@ -9,4 +9,5 @@
 
 ### UML - диаграмма
 ![t0qVno_13j4](https://user-images.githubusercontent.com/103387680/228005997-905d3c26-c9d6-4e86-b253-1aa9fd64cfcc.jpg)
-![image](https://user-images.githubusercontent.com/103387680/229346512-f02694f0-5539-4258-9f04-7c7f49543a8f.png)
+![image](https://user-images.githubusercontent.com/103387680/229346619-afc90b7f-6257-4c63-ac80-457d00919479.png)
+
