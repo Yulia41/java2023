@@ -2,9 +2,11 @@ package education;
 
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @ToString
 
@@ -13,7 +15,24 @@ public class Student {
     private String secondName;
     private String group;
     private int age;
+    private List<Mark> markList;
 
+    public void addMarc(Mark mark){
+        markList = new ArrayList<>();
+        this.markList.add(mark);
+    }
+
+
+    public String progress(){
+        int countMarcExam = 0;
+        for(Mark mark: markList){
+            if(mark instanceof MarkExam){
+                countMarcExam++;
+            }
+        }
+        double result = 12.5*countMarcExam;
+        return result+"%";
+    }
     public Student(String firstName, String secondName, String group, int age) {
         this.firstName = firstName;
         this.secondName = secondName;
