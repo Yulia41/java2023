@@ -2,10 +2,11 @@ package education;
 import lombok.*;
 
 @Getter
-@Setter
-@AllArgsConstructor
+@Setter(AccessLevel.PRIVATE)
+//@AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Builder
 public class Task {
     private String condition;
     private Complexity complexity;
@@ -20,24 +21,37 @@ public class Task {
     }
 
     public int task() {
-        int hard=(int)(Math.random()*4);//сложность задания(может попасть любое из трёх уровней сложности
-        if(hard==0){//задание лёгкое, всегда решается
-            return 100;//награждается 100 рублями
+        //сложность задания(может попасть любое из трёх уровней сложности
+        int hard=(int)(Math.random()*4);
+        //задание лёгкое, всегда решается
+        if(hard==0){
+            //награждается 100 рублями
+            return 100;
         }
-        else if(hard==1){//задание средней сложности
-            int a=(int)(Math.random()*2);//вероятность решения 50%
-            if (a==1){//задание решено
-                return 500;//награждение
+        //задание средней сложности
+        else if(hard==1){
+            //вероятность решения 50%
+            int a=(int)(Math.random()*2);
+            //задание решено
+            if (a==1){
+                //награждение
+                return 500;
             }
-            else//задание не решено
+            //задание не решено
+            else
                 return 0;
         }
-        else {//сложное задание
-            int b=(int)(Math.random()*3);//вероятность решения 33%
-            if (b==2){//задание решено
-                return 1000;//вознаграждение
+        //сложное задание
+        else {
+            //вероятность решения 33%
+            int b=(int)(Math.random()*3);
+            //задание решено
+            if (b==2){
+                //вознаграждение
+                return 1000;
             }
-            else//задание не решено
+            //задание не решено
+            else
                 return 0;
         }
 

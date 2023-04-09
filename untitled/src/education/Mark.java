@@ -3,7 +3,7 @@ package education;
 import lombok.*;
 
 @Getter
-@Setter
+@Setter(AccessLevel.PRIVATE)
 @AllArgsConstructor
 @NoArgsConstructor
 public class Mark {
@@ -22,17 +22,25 @@ public class Mark {
                 ", discipline='" + discipline + '\'' +
                 '}';
     }
-    public int hardTeacher(){//оценув зависит от жёсткости преподователя
-        int hard=(int)(Math.random()*2);//может попасться жёсткий преподаватель
-        if(hard==0){//попался жёсткий преподаватель
-            return 0;//оценка 2, награждения нет
+    //оценка зависит от жёсткости преподователя
+    public int hardTeacher(){
+        //может попасться жёсткий преподаватель
+        int hard=(int)(Math.random()*2);
+        //попался жёсткий преподаватель
+        if(hard==0){
+            //оценка 2, награждения нет
+            return 0;
         }
-        else {//попался добрый преподаватель
-            int money=(int)(Math.random()*2);//вероятность получить 4 или 5
-            if(money==0){//поставили 4
+        //попался добрый преподаватель
+        else {
+            //вероятность получить 4 или 5
+            int money=(int)(Math.random()*2);
+            //поставили 4
+            if(money==0){
                 return 500;
             }
-            else//поставили 5
+            //поставили 5
+            else
                 return 1000;
         }
 
