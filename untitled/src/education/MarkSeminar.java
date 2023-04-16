@@ -6,4 +6,10 @@ public class MarkSeminar extends Mark{
     public String toString() {
         return "MarkSeminar"+super.toString();
     }
+    @Override
+    public void addTaskList(Task task) {
+        if(getTaskList().size() < 1){
+            getTaskList().add(task);
+        }
+    }
 }

@@ -2,26 +2,35 @@ package education;
 
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Getter
 @Setter(AccessLevel.PRIVATE)
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Mark {
 
 
-    private int grade;
+
     private String teacher;
     private String discipline;
 
+    private List<Task> taskList = new ArrayList<Task>();
 
-    @Override
-    public String toString() {
-        return "{" +
-                "grade=" + grade +
-                ", teacher='" + teacher + '\'' +
-                ", discipline='" + discipline + '\'' +
-                '}';
+    public void addTaskList(Task task){
+
     }
+
+    public int Grade(){
+        int grade = 0;
+        for(Task task : taskList){
+            grade+= task.getScore();
+        }
+        return grade;
+    }
+
     //оценка зависит от жёсткости преподователя
     public int hardTeacher(){
         //может попасться жёсткий преподаватель

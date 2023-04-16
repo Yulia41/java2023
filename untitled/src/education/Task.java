@@ -12,12 +12,14 @@ public class Task {
     private Complexity complexity;
     private String type;
     private String answer;
+    private int score;
 
-    public Task(String condition, Complexity complexity, String type, String answer) {
+    public Task(String condition, Complexity complexity, String type, String answer, int score) {
         this.condition = condition;
         this.complexity = complexity;
         this.type = type;
         this.answer = answer;
+        this.score = score;
     }
 
     public int task() {

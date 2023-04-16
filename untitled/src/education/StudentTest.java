@@ -13,7 +13,7 @@ Student student;
 @BeforeEach
     void data(){
     student=new Student("Имя","Фамилия","группа",20,
-            new ArrayList<>(Arrays.asList(new MarkExam())));
+            new ArrayList<Mark>(Arrays.asList(new MarkExam())));
 }
 //    @Test
 //    void addMarc() {

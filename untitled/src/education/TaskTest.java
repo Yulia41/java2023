@@ -9,7 +9,7 @@ class TaskTest {
 Task task;
 @BeforeEach
 void data(){
-    task=new Task("Условие",Complexity.HARD,"математика","ответ");
+    task=new Task("Условие",Complexity.HARD,"математика","ответ",10);
 }
 
     @Test

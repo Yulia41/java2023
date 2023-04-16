@@ -7,4 +7,11 @@ public class MarkExam extends Mark{
     public String toString() {
         return "MarkExam"+super.toString();
     }
+    @Override
+    public void addTaskList(Task task) {
+        if(getTaskList().size() < 3){
+            getTaskList().add(task);
+        }
+    }
+
 }
