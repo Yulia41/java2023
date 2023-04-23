@@ -13,9 +13,6 @@ public class MarkFactory {
             case SEMINAR:
                 mark = new MarkSeminar();
                 break;
-            case SEMESTER:
-                mark = new MarkSemester();
-                break;
 
         }
         return mark;

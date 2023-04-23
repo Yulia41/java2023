@@ -6,20 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Getter
-@Setter(AccessLevel.PRIVATE)
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Mark {
-
-
+public class Mark implements TaskImp {
 
     private String teacher;
     private String discipline;
-
     private List<Task> taskList = new ArrayList<Task>();
 
-    public void addTaskList(Task task){
+    @Override
+    public void addTaskList(Task task) {
 
     }
 
@@ -54,5 +52,5 @@ public class Mark {
         }
 
     }
-}
 
+}
