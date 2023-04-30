@@ -7,6 +7,7 @@ import java.util.*;
 @Getter
 @Setter(AccessLevel.PRIVATE)
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 @Builder
 public class Student {
@@ -23,7 +24,6 @@ public class Student {
     public void addMarc(Mark mark) {
         this.markList.add(mark);
     }
-
 
     public String progress() {
         int countMarcExam = 0;
@@ -60,13 +60,13 @@ public class Student {
     }
 
 
-    public Student(String firstName, String secondName, String group, int age, List<Mark> markList) {
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.group = group;
-        this.age = age;
-        this.markList = markList;
-    }
+//    public Student(String firstName, String secondName, String group, int age, List<Mark> markList) {
+//        this.firstName = firstName;
+//        this.secondName = secondName;
+//        this.group = group;
+//        this.age = age;
+//        this.markList = markList;
+//    }
 
     public int money() {
         //Вероятность решить задание хорошо=1/5
@@ -132,5 +132,4 @@ public class Student {
 //        student.info();
 
     }
-
 }
